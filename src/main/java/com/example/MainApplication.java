@@ -6,11 +6,16 @@ package com.example;
  * @author liershui
  * @date 2021/5/10 11:45 上午
  */
+ @RestController
+ @SpringBootApplication
 public class MainApplication {
 
+    @RequestMapping("/")
+    String home() {
+        return "Hello World!";
+    }
+    
     public static void main(String[] args) {
-        System.out.println("Hello");
-
-        System.out.println("World");
+       SpringApplication.run(MainApplication.class, args);
     }
 }
